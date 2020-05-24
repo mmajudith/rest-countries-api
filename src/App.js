@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { RiMoonLine } from "react-icons/ri"
+//import {FaMoon} from 'react-icons/fa'
+import { IoMdMoon } from 'react-icons/io'
+import Countries from './Components/Countries'
+import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div  className="App-light">
+
+      <header>
+        <div className="inner-header">
+          <div>
+            <h2>Where in the World?</h2>
+          </div>
+          <div className="icons">
+            <RiMoonLine className="dark-light"/>
+            <IoMdMoon className="dark-moon"/>
+            <span>Dark mode</span>
+          </div> 
+        </div>
       </header>
+      
+      <Countries />
     </div>
   );
 }

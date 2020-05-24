@@ -1,0 +1,57 @@
+
+@import "styles/reset.scss";
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+
+.App-light{
+    background-color: $VeryLightGrayLightModeBackground;
+    color: $VeryDarkBlueLightModeText;
+    .dark-moon{
+        display: none;
+    }
+    header{
+        background-color: $WhiteDarkModeTextLightModeElements;
+        width: 100%;
+        margin-bottom: 20px;
+        box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+        font-weight: 700;
+        .inner-header{
+            @include layout;
+            padding: 30px;
+            .icons{
+                cursor: pointer;
+                span{
+                    padding-left: 7px;
+                }
+            }
+            
+        }
+    }
+    .search{
+        @include layout;
+         padding: 40px;
+         input[type="text"]{
+            width: 200%;
+            @include inputFil;
+            background-image: url('./icons8-search-50.png');
+            background-position: 35px 17px;
+            background-size: 24px;
+            background-repeat: no-repeat;
+            padding-left: 90px;
+            font-size: 16px;
+            color: $DarkGrayLightModeInput;
+         }
+         select{
+             width: 200px;
+             color: $VeryDarkBlueLightModeText;
+             @include inputFil;
+             font-size: 14px;
+             option{
+                @include inputFil;
+             }
+         }
+     }
+    
+}
+
+

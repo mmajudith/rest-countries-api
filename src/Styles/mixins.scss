@@ -1,0 +1,17 @@
+
+@mixin inputFil{
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+    border-radius: 5px;
+    padding: 20px;
+    background-color:$WhiteDarkModeTextLightModeElements;
+    
+}
+
+@mixin layout{
+    width: 90%;
+    margin: auto auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
