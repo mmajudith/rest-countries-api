@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import '../Styles/Countries.style.scss'
+import Search from './Search'
+
 
 const initialState = {
   loading: true,
@@ -11,6 +12,35 @@ const initialState = {
 function Countries() {
 
   const [state, setState] = useState(initialState)
+
+//Input Search
+  const filteredCountry = (inputValue) =>{
+    let CountriesName = document.querySelectorAll('.countries-name')
+
+    Array.from(CountriesName)
+    .filter(el => !el.textContent.toLowerCase().includes(inputValue))
+    .forEach(elm => elm.parentElement.classList.add('filterd'))
+
+    Array.from(CountriesName)
+    .filter(el => el.textContent.toLowerCase().includes(inputValue))
+    .forEach(elm => elm.parentElement.classList.remove('filterd'))
+  }
+
+// Filtered based on region
+
+  const filteredRegion = (selected) =>{
+    let regions = document.querySelectorAll('.region')
+
+    Array.from(regions)
+    .filter(el => !el.innerHTML.includes(selected))
+    .forEach(elm => elm.parentElement.classList.add('filterd'))
+
+    Array.from(regions)
+    .filter(el => el.innerHTML.includes(selected))
+    .forEach(elm => elm.parentElement.classList.remove('filterd'))
+  }
+
+  //Making HTTP call
 
   useEffect(() => {
     axios
@@ -28,33 +58,22 @@ function Countries() {
 
   return (
     <div> 
-      <div className="search">
-          <div>
-              <input type="text" placeholder= "Search for a country..."/>
-          </div>
-          <div>
-              <select>
-                <option>Filter by Region</option>
-                <option>Africa</option>
-                <option>America</option>
-                <option>Europe</option>
-                <option>Oceania</option>
-              </select>
-          </div>
-        </div>
-        <div className="countries-wrapper">
-          {state.loading? <h1>Please Wait...</h1> : 
-          countries.map((con, index) => <div key={index} className="list-items">
-                <img src={con.flag} alt="country-flag" className="img-flag"/>
-                <div className="items">
+      <div className="CountriesContainer">
+       
+          <Search countries={filteredCountry} regions={filteredRegion}/>
+
+          <ul className="countries-wrapper">
+            {state.loading? <h1>Please Wait...</h1> : 
+            countries.map((con, index) => <li key={index} className="list-items">
+                  <img src={con.flag} alt="country-flag" className="img-flag"/>
                   <p className="countries-name">{con.name}</p>
                   <p><span>Populations:</span> {con.population}</p>
-                  <p><span>Region: </span>{con.region}</p>
-                  <p><span>Capital:</span> {con.capital}</p>
-                </div>
-            </div>)
-          }
-          { state.error ? state.error : null}
+                  <p className="region"><span>Region: </span>{con.region}</p>
+                  <p><span>Capital:</span> {con.capital}</p>        
+              </li>)
+            }
+            { state.error ? state.error : null}
+          </ul>
         </div>
     </div>
   )

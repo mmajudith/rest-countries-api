@@ -1,11 +1,12 @@
 import React from 'react';
 import { RiMoonLine } from "react-icons/ri"
-//import {FaMoon} from 'react-icons/fa'
 import { IoMdMoon } from 'react-icons/io'
 import Countries from './Components/Countries'
 import './App.scss';
 
 function App() {
+
+
   return (
     <div  className="App-light">
 
@@ -15,7 +16,7 @@ function App() {
             <h2>Where in the World?</h2>
           </div>
           <div className="icons">
-            <RiMoonLine className="dark-light"/>
+            <RiMoonLine className="light-moon"/>
             <IoMdMoon className="dark-moon"/>
             <span>Dark mode</span>
           </div> 

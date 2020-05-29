@@ -1,7 +1,8 @@
 
-@import "styles/reset.scss";
-@import "styles/variables.scss";
-@import "styles/mixins.scss";
+@import "Styles/reset.scss";
+@import "Styles/variables.scss";
+@import "Styles/mixins.scss";
+@import "./Styles/Countries.style.scss";
 
 .App-light{
     background-color: $VeryLightGrayLightModeBackground;
@@ -27,31 +28,6 @@
             
         }
     }
-    .search{
-        @include layout;
-         padding: 40px;
-         input[type="text"]{
-            width: 200%;
-            @include inputFil;
-            background-image: url('./icons8-search-50.png');
-            background-position: 35px 17px;
-            background-size: 24px;
-            background-repeat: no-repeat;
-            padding-left: 90px;
-            font-size: 16px;
-            color: $DarkGrayLightModeInput;
-         }
-         select{
-             width: 200px;
-             color: $VeryDarkBlueLightModeText;
-             @include inputFil;
-             font-size: 14px;
-             option{
-                @include inputFil;
-             }
-         }
-     }
-    
 }
 
-
+    
