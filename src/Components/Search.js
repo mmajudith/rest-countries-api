@@ -40,11 +40,11 @@ function Search({countries, regions}) {
 
   return (
     <div>
-      <div className="search">
-            <div>
-                <input ref={inputRef} type="text" placeholder= "Search for a country..."/>
-            </div>
-            <div className="select-box">
+            <div className="search">
+                <div>
+                    <input ref={inputRef} type="text" placeholder= "Search for a country..."/>
+                </div>
+                <div className="select-box">
 
                     <div ref={selectOptionRef} className={toggleOptions ? "active" : "options-container"}>
 
@@ -57,8 +57,8 @@ function Search({countries, regions}) {
                     </div>  
 
                 <div ref={selectedRef} onClick={openCloseOptions} className="selected">Filter by Region</div>  
+                </div>
             </div>
-          </div>
     </div>
   )
 }

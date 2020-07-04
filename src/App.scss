@@ -2,11 +2,16 @@
 @import "Styles/reset.scss";
 @import "Styles/variables.scss";
 @import "Styles/mixins.scss";
+@import "./Styles/font.css";
 @import "./Styles/Countries.style.scss";
+@import "./Styles/CountriesDetail.scss";
 
 .App-light{
-    background-color: $VeryLightGrayLightModeBackground;
-    color: $VeryDarkBlueLightModeText;
+    background-color:$WhiteDarkModeTextLightModeElements;
+    color: $DarkGrayLightModeInput;
+    font-family: 'Nunito Sans';
+    font-weight: 300;
+    font-size: 14px;
     .dark-moon{
         display: none;
     }
@@ -15,11 +20,13 @@
         width: 100%;
         margin-bottom: 20px;
         box-shadow: 0px 0px 10px rgba(0,0,0,.2);
-        font-weight: 700;
+        color: hsl(200, 15%, 8%);
         .inner-header{
             @include layout;
+            font-weight: 800;
             padding: 30px;
             .icons{
+                padding-top: 10px;
                 cursor: pointer;
                 span{
                     padding-left: 7px;
@@ -30,4 +37,112 @@
     }
 }
 
+.App-Dark{
+    max-width: 1440px;
+    width: 100%;
+    height: 100%;
+    margin: auto auto;
+    background-color: $VeryDarkBlueDarkModeBackground;
+    color: $WhiteDarkModeTextLightModeElements;
+    font-family: 'Nunito Sans';
+    font-weight: 300;
+    font-size: 14px;
     
+    header{
+        background-color: $DarkBlueDarkModeElements;
+        width: 100%;
+        margin-bottom: 20px;
+        box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+        .inner-header{
+            @include layout;
+            font-weight: 800;
+            padding: 30px;
+            .icons{
+                padding-top: 10px;
+                cursor: pointer;
+                .dark-moon{
+                    display: block;
+                    display: inline;
+                }
+                .light-moon{
+                    display: none;
+
+                }
+                span{
+                    padding-left: 7px;
+                }
+            }
+            
+        }
+    }
+
+        .search{
+            input[type="text"]{
+               background-color: $DarkBlueDarkModeElements;
+               color: #FFF;
+               
+            }
+            .select-box{
+               color: $WhiteDarkModeTextLightModeElements;
+                .active{
+                   background-color: $DarkBlueDarkModeElements;
+                }
+                .selected{
+                    background-color: $DarkBlueDarkModeElements;
+               }
+            }
+        }
+
+     .countries-wrapper{
+        h1{
+            color: #FFF;
+        }
+        .list-items{
+            background-color: $DarkBlueDarkModeElements;
+            .countries-name{
+                .activeStyle{
+                    text-decoration: none;
+                    color:  $WhiteDarkModeTextLightModeElements ;
+                  }
+                }      
+            span{
+                color:  $WhiteDarkModeTextLightModeElements ;
+                }
+        }
+        
+    }
+
+    .back-wrapper{
+        .back{
+            color: $WhiteDarkModeTextLightModeElements;
+            background-color: $DarkBlueDarkModeElements;
+            cursor: pointer;
+        }
+    }
+    .detail-wrapper{
+        .details{
+            
+            .borders{
+                color: $WhiteDarkModeTextLightModeElements;
+                background-color: $DarkBlueDarkModeElements;;
+                cursor: pointer;
+            }
+            .bottom{
+                .delName{
+                    color: $WhiteDarkModeTextLightModeElements;
+                    
+                }  
+            }
+            span{
+                color:$WhiteDarkModeTextLightModeElements ;
+            }
+            .borders-wrapper{
+                .con-bor{
+                    display: block;
+                    padding: 5px 2px 15px 10px;
+                }
+            }
+            
+        }
+    }
+}
