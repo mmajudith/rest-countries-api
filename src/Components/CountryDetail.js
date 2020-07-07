@@ -1,14 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useParams, useHistory } from 'react-router-dom'
 import { FaArrowLeft } from "react-icons/fa";
-import { Link } from 'react-router-dom'
+//import { Link } from 'react-router-dom'
 import  useFetch  from '../hook/useFetch'
 
 
 function CountryDetail() {
 
   const [countryDetails ] = useFetch()
-//   const [dashboard, setDas]
   const  history  = useHistory();
   const { name } = useParams();
   
@@ -27,7 +26,7 @@ function CountryDetail() {
 
   const country = Array.from(countryDetails.countryDetails)
   const findIndex = country.filter(el => el.name === name)
-
+  //console.log(findIndex)
   return (
   
     <div className="countries-det-wrapper">
@@ -39,8 +38,8 @@ function CountryDetail() {
            {
             countryDetails.loading? <h1>Please Wait...</h1> :
             findIndex.map((el, index) => <div key={index} className="detail-wrapper">
-            <div>
-                <img src={el.flag} alt="country flag" height="450" width="550"/>
+            <div className="con-flag">
+                <img src={el.flag} alt="country flag" height="450" width="550" className="flag-img"/>
             </div>   
             <div className="details">
           		<div className="flex">
@@ -54,7 +53,7 @@ function CountryDetail() {
             		</div>
            			<div className="top">
               			<div>
-                			<span>Top Level Domain: </span>{el.topLevelDomain.map((top, ind)=> <div key={ind} className="top">{top}</div>)}
+                			<span>Top Level Domain: </span>{el.topLevelDomain.map((top, ind)=> <div key={ind} className="topL">{top}</div>)}
               			</div>
 						<div>	   
             	    		<span>Currencies: </span>{el.currencies.map((cur, ind)=> <div key={ind} className="cur">{cur.name}</div>)}
@@ -65,7 +64,7 @@ function CountryDetail() {
             		</div>
           		</div>
           		<div className="borders-wrapper">	   
-            		<span className="con-bor">Borders Countries: </span>{el.borders.map((bor, ind)=> <div key={ind} className="borders"><Link to={'/rest-countries-api/:name/'}>{bor}</Link></div>)}
+            		<span className="con-bor">Borders Countries: </span>{el.borders.map((bor, ind)=> <div key={ind} className="borders">{bor}</div>)}
           		</div> 
         	</div> 
 			 

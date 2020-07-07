@@ -17,7 +17,7 @@ function App() {
     // <div  className="App-light">
     <div className={ toggle ? "App-light" : "App-Dark"}> 
 
-      <header>
+      <header >
         <div className="inner-header">
           <div>
             <h1>Where in the World?</h1>

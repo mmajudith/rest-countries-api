@@ -41,8 +41,8 @@ function Search({countries, regions}) {
   return (
     <div>
             <div className="search">
-                <div>
-                    <input ref={inputRef} type="text" placeholder= "Search for a country..."/>
+                <div className="input-search">
+                    <input ref={inputRef} type="text" placeholder="Search for a country..."/>
                 </div>
                 <div className="select-box">
 

@@ -11,37 +11,65 @@
     color: $DarkGrayLightModeInput;
     font-family: 'Nunito Sans';
     font-weight: 300;
-    font-size: 14px;
     .dark-moon{
         display: none;
     }
     header{
         background-color: $WhiteDarkModeTextLightModeElements;
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 60px;
         box-shadow: 0px 0px 10px rgba(0,0,0,.2);
         color: hsl(200, 15%, 8%);
         .inner-header{
             @include layout;
             font-weight: 800;
-            padding: 30px;
+            padding: 2% 0%;
             .icons{
-                padding-top: 10px;
+                padding-top: 1%;
                 cursor: pointer;
                 span{
-                    padding-left: 7px;
+                   padding-left: 7px;
                 }
             }
             
         }
     }
+ 
+}
+
+@include mq(850px){
+    .App-light{
+        header{
+            .inner-header{
+                padding: 5% 0%;
+                .icons{
+                    padding-top: 2%;
+                }
+            }
+        }
+    }
+    
+}
+
+@include mq(572px){
+    .App-light{
+        header{
+            margin-bottom: 40px;
+            .inner-header{
+                padding: 8% 0%;
+                h1{
+                    font-size: 18px;
+                }
+                .icons{
+                    padding-top: 0%;
+                }
+            }
+        }
+    }
+    
 }
 
 .App-Dark{
-    max-width: 1440px;
-    width: 100%;
-    height: 100%;
-    margin: auto auto;
     background-color: $VeryDarkBlueDarkModeBackground;
     color: $WhiteDarkModeTextLightModeElements;
     font-family: 'Nunito Sans';
@@ -51,14 +79,14 @@
     header{
         background-color: $DarkBlueDarkModeElements;
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 60px;
         box-shadow: 0px 0px 10px rgba(0,0,0,.2);
         .inner-header{
             @include layout;
             font-weight: 800;
-            padding: 30px;
+            padding: 2% 0%;
             .icons{
-                padding-top: 10px;
+                padding-top: 1%;
                 cursor: pointer;
                 .dark-moon{
                     display: block;
@@ -79,8 +107,7 @@
         .search{
             input[type="text"]{
                background-color: $DarkBlueDarkModeElements;
-               color: #FFF;
-               
+               color: $WhiteDarkModeTextLightModeElements;
             }
             .select-box{
                color: $WhiteDarkModeTextLightModeElements;
@@ -125,7 +152,7 @@
             .borders{
                 color: $WhiteDarkModeTextLightModeElements;
                 background-color: $DarkBlueDarkModeElements;;
-                cursor: pointer;
+               // cursor: pointer;
             }
             .bottom{
                 .delName{
@@ -145,4 +172,52 @@
             
         }
     }
+}
+@include mq(850px){
+    .App-Dark{
+        header{
+            .inner-header{
+                padding: 5% 0%;
+                .icons{
+                    padding-top: 2%;
+                }
+            }
+        }
+    }
+    
+}
+
+@include mq(572px){
+    .App-Dark{
+        header{
+            margin-bottom: 40px;
+            .inner-header{
+                padding: 8% 0%;
+                h1{
+                    font-size: 18px;
+                }
+                .icons{
+                    padding-top: 0%;
+                }
+            }
+        }
+    }
+    
+}
+
+@include mq(1300px){
+    .App-Dark{
+        .detail-wrapper{
+            .details{
+                .borders-wrapper{
+                    .con-bor{
+                        padding: 40px 0px 5px 0px;
+                    }
+                }
+            }
+            
+        }
+        
+    }
+    
 }

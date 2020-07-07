@@ -34,14 +34,13 @@ function Countries() {
     .forEach(elm => elm.parentElement.classList.remove('filterd'))
   }
 
-
    const countries = Array.from(countryDetails.countryDetails)
 
   return (
     <div> 
       <div className="CountriesContainer">
        
-          <Search countries={filteredCountry} regions={filteredRegion}/>
+         <Search countries={filteredCountry} regions={filteredRegion}/>
 
           <ul className="countries-wrapper">
             {countryDetails.loading? <h1>Please Wait...</h1> : 
@@ -54,7 +53,7 @@ function Countries() {
                   <p><span>Populations:</span> {con.population}</p>
                   <p className="region"><span>Region: </span>{con.region}</p>
                   <p><span>Capital:</span> {con.capital}</p> 
-                      
+                    
               </li>)
             }
             { countryDetails.error ? countryDetails.error : null}
