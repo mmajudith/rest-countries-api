@@ -210,16 +210,18 @@
     .CountriesContainer{
         height: 7520em;
         .search{
-            input[type="text"]{
-                width: 50%;
-                margin: auto auto;
-                padding: 6% 5%;
-                background-image: url('../icons8-search-50.png');
-                background-position: 30px;
-                background-size: 24px; 
-                background-repeat: no-repeat;
-                padding-left: 90px; 
-            }
+            .input-search{
+                width: 90%;
+                input[type="text"]{
+                    width: 86%;
+                    margin: auto auto;
+                    padding: 6% 5% 6% 20%;
+                    background-image: url('../icons8-search-50.png');
+                    background-position: 25px;
+                    background-size: 24px; 
+                    background-repeat: no-repeat;
+                }
+            } 
         }
         .countries-wrapper{
             width: 100%;
@@ -227,6 +229,7 @@
             margin: auto auto;
             justify-content: center;
             align-items: center;
+            vertical-align: top;
             left: 0%;
             .list-items{
                 width: 80%;
