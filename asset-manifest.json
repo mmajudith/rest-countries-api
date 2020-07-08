@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/rest-countries-api/static/css/main.b61d1ed0.chunk.css",
+    "main.css": "/rest-countries-api/static/css/main.bb0a3c7b.chunk.css",
     "main.js": "/rest-countries-api/static/js/main.928a765f.chunk.js",
     "main.js.map": "/rest-countries-api/static/js/main.928a765f.chunk.js.map",
     "runtime-main.js": "/rest-countries-api/static/js/runtime-main.f71b98d8.js",
@@ -8,16 +8,16 @@
     "static/js/2.6a1d6061.chunk.js": "/rest-countries-api/static/js/2.6a1d6061.chunk.js",
     "static/js/2.6a1d6061.chunk.js.map": "/rest-countries-api/static/js/2.6a1d6061.chunk.js.map",
     "index.html": "/rest-countries-api/index.html",
-    "precache-manifest.c898779a59a45bd027369685f2892581.js": "/rest-countries-api/precache-manifest.c898779a59a45bd027369685f2892581.js",
+    "precache-manifest.18ead1b619671420f7453feca64abc18.js": "/rest-countries-api/precache-manifest.18ead1b619671420f7453feca64abc18.js",
     "service-worker.js": "/rest-countries-api/service-worker.js",
-    "static/css/main.b61d1ed0.chunk.css.map": "/rest-countries-api/static/css/main.b61d1ed0.chunk.css.map",
+    "static/css/main.bb0a3c7b.chunk.css.map": "/rest-countries-api/static/css/main.bb0a3c7b.chunk.css.map",
     "static/js/2.6a1d6061.chunk.js.LICENSE.txt": "/rest-countries-api/static/js/2.6a1d6061.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/rest-countries-api/static/media/icon-arrow.767dbd62.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.f71b98d8.js",
     "static/js/2.6a1d6061.chunk.js",
-    "static/css/main.b61d1ed0.chunk.css",
+    "static/css/main.bb0a3c7b.chunk.css",
     "static/js/main.928a765f.chunk.js"
   ]
 }
