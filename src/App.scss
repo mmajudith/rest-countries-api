@@ -107,7 +107,9 @@
         .search{
             input[type="text"]{
                background-color: $DarkBlueDarkModeElements;
-               color: $WhiteDarkModeTextLightModeElements;
+            }
+            input::placeholder{
+                color: $WhiteDarkModeTextLightModeElements;
             }
             .select-box{
                color: $WhiteDarkModeTextLightModeElements;

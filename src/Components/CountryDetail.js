@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams, useHistory } from 'react-router-dom'
 import { FaArrowLeft } from "react-icons/fa";
-//import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import  useFetch  from '../hook/useFetch'
 
 
@@ -26,7 +26,7 @@ function CountryDetail() {
 
   const country = Array.from(countryDetails.countryDetails)
   const findIndex = country.filter(el => el.name === name)
-  //console.log(findIndex)
+  console.log(findIndex)
   return (
   
     <div className="countries-det-wrapper">
@@ -64,7 +64,7 @@ function CountryDetail() {
             		</div>
           		</div>
           		<div className="borders-wrapper">	   
-            		<span className="con-bor">Borders Countries: </span>{el.borders.map((bor, ind)=> <div key={ind} className="borders">{bor}</div>)}
+            		<span className="con-bor">Borders Countries: </span>{el.borders.map((bor, ind)=> <div key={ind} className="borders"><Link to={`/rest-countries-api/${bor.name}`}>{bor}</Link></div>)}
           		</div> 
         	</div> 
 			 
