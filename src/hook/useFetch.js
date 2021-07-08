@@ -16,6 +16,7 @@ function useFetch() {
   
             const response = await axios.get('https://restcountries.eu/rest/v2/all');
             const data =  response.data
+            console.log(data)
             setCountryDetails({loading: false, error: '', postDetails: data})
         
         }catch(err){

@@ -14,7 +14,6 @@ function App() {
   }
 
   return (
-    // <div  className="App-light">
     <div className={ toggle ? "App-light" : "App-Dark"}> 
 
       <header >
